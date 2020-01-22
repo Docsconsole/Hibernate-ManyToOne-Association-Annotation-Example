@@ -2,6 +2,7 @@ package com.docsconsole.tutorials.hibernate5.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,7 +37,7 @@ public class Book {
 	private Double bookPrice;
 
 	@ManyToOne
-	@JoinColumn(name = "AUTHOR_ID", nullable = false)
+	@JoinColumn(name = "AUTHOR_ID", nullable = false,foreignKey = @ForeignKey(name = "BOOKS_FK"))
 	private Author author;
 
 	public Long getBookId() {

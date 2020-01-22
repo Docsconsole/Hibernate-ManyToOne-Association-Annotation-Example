@@ -11,7 +11,7 @@ public class MainClient {
 	
 	public static void main(String[] args) {
 
-		System.out.println("Main method@MainClient");
+		System.out.println("Main method@@MainClient");
 
 		// obtains the session
 		Author author1 = new Author();
